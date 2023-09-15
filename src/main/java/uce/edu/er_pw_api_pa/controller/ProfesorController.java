@@ -48,7 +48,7 @@ public class ProfesorController {
     }
 
     @GetMapping(path = "/{id}")
-    private ResponseEntity<ProfesorTO> consultarProfesor(@PathVariable Integer id) {
+    public ResponseEntity<ProfesorTO> consultarProfesor(@PathVariable Integer id) {
         return  new ResponseEntity<ProfesorTO>(this.profesorService.buscarPorId(id), null, 200);
     }
 
